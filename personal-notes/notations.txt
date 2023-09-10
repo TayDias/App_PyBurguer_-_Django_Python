@@ -1,0 +1,86 @@
+# Anotações sobre o Django e o projeto
+
+Um projeto Django é composto por um conjunto de aplicações.
+
+Segue o padrão MTV - Model Template View. Diferente do MVV.
+
+    Model = 
+        Módulo de ORM (Mapeamento de objeto relacional) do Django. 
+        Camada de especificação de classes que serão propagadas para o banco de dados. 
+        Provavelmente terá uma tabela associada.
+
+    View = 
+        É um componente que recebe uma requisição, faz o processamento da lógica do código e devolve um conteúdo HTML envelopado em um template.
+        Processa toda a regra e toda a lógica de negócio.
+
+    Template =
+        É o código HTML proprieamente dito.
+
+
+
+## Criando o ambiente com o VSCode ao invés do PyCharm
+
+    Criar ambiente:
+        python3 -m venv .venv
+
+    Selecionar ambiente:
+        source .venv/bin/activate
+    
+    Instalar o Django:
+        python -m pip install django
+
+
+    https://code.visualstudio.com/docs/python/tutorial-django
+
+
+## Criar um arquivo txt com todas as dependencias do projeto
+
+    pip freeze > requirements.txt
+
+
+## Criando e dando start no projeto Django
+
+    Criação de um projeto chamado core:
+    
+        django-admin startproject core .
+
+
+    Start do projeto criado - executando o arquivo manage.py:
+
+        python manage.py runserver
+
+
+    OBS: Para acessar o server basta ir no IP fornecido pelo terminal
+
+
+    ### Sobre os arquivos criados:
+
+        settings.py: arquivo que contém todas as configurações que vão reger as aplicações do Django
+
+        urls.py: arquivo que declara as rotas da aplicação
+
+
+## Criando uma aplicação
+
+    django-admin startapp burguer
+
+
+    OBS: Para que o Django entenda como uma aplicação é necessário incluir o nome da aplicação em INSTALLED_APPS, do arquivo settings.py, da pasta core.
+
+
+## Criar os models
+
+    ### 'Empacotar' os models e prepara-los para criação de tabelas no BD
+
+        python manage.py makemigrations
+
+    ### Aplicar as migrations, criando as tabelas no DB
+
+        python manage.py migrate
+
+
+## Criando um super-usuário
+
+    python manage.py createsuperuser
+
+    OBS: Informar nome e senha e confirmar. O E-mail pode ficar em branco

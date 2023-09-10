@@ -1,0 +1,54 @@
+<!-- Sempre que se está trabalhando com arquivos estáticos no Django é necessário carrega-los com a instrução abaixo -->
+{% load static %}
+
+<div class="row mt-5">
+    <div class="col">
+        <div class="container bg-danger rounded my-4">
+            <div class="spam text-white text-center display-4 fw-bold">
+                Conheça nossos melhores hamburguers
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row my-3">
+
+    <!-- offset-1 é para ter a primeira coluna em branco antes do col-md-10 -->
+    <div class="col-md-10 offset-1">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card bg-warning">
+                    <img src="{% static 'burguer/burguer_slide2.jpg' %}" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-body">Card title</h5>
+                        <p class="card-text"
+                            >This is a longer card with supporting text below as a natural lead-in to additional content. This content ias a little bit ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-warning">
+                    <img src="{% static 'burguer/burguer_slide2.jpg' %}" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-body">Card title</h5>
+                        <p class="card-text"
+                            >This is a longer card with supporting text below as a natural lead-in to additional content. This content ias a little bit ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-warning">
+                    <img src="{% static 'burguer/burguer_slide2.jpg' %}" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-body">Card title</h5>
+                        <p class="card-text"
+                            >This is a longer card with supporting text below as a natural lead-in to additional content. This content ias a little bit ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Pyburguer {% endblock %}
+
+
+{% block navbar %}
+
+    <!-- Tag include do Django - Infoma-se o caminho onde o template se encontra -->
+    {% include 'fragments/navbar.html' %}
+
+{% endblock %}
+
+
+{% block banner %}
+    {% include 'fragments/banner.html' %}
+{% endblock %}
+
+
+{% block content %}
+    {% include 'fragments/content.html' %}
+{% endblock %}
